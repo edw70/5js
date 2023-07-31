@@ -1,7 +1,39 @@
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
   \*********************************************************************************************************/
-h1 {
-  background-color: aqua;
-  color: blue;
+body {
+  font-size: 100%;
+  background-color: #F5F5F5;
+  --background: $background;
+  --font-color-light: $font-color-light;
+  --font-color-dark: $font-color-dark;
+}
+
+.light {
+  background-color: var(--background-light-color);
+  color: var(--font-color-light);
+  font-size: 12px;
+  transition: all 0.25s ease;
+  min-height: 100vh;
+  margin: 0px;
+}
+
+.dark {
+  background-color: #333;
+  color: var(--font-color-dark);
+}
+
+header {
+  padding: 0 50px 50px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.color-band {
+  height: 339px;
+  background-image: url(81b006cc8cbf3526fd1c.png), linear-gradient(90deg, rgb(51, 77, 110) 0%, rgb(87, 52, 116) 100%);
+  background-repeat: no-repeat;
+  background-position: top center;
 }

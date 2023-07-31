@@ -1,5 +1,50 @@
-h1
-{
-    background-color: aqua;
-    color: blue;
+// Variables
+$background-light-color: #F5F5F5;
+$color-box: #FFFFFF;
+$color-box-dark: #F8F8F8;
+$font-color-light: #703876;
+$font-color-dark: #F5F5F5;
+$background: #28096b;
+$background-toggle-on: #522ba7;
+$background-toggle-off: var(--background);
+$background-toggle-knob: #fff000;
+
+// General Styles
+body {
+  font-size: 100%;
+  background-color: $background-light-color;
+  --background: $background; // Define the custom property here as it depends on the variable
+  --font-color-light: $font-color-light; // Define the custom property here as it depends on the variable
+  --font-color-dark: $font-color-dark; // Define the custom property here as it depends on the variable
 }
+
+.light {
+  background-color: var(--background-light-color);
+  color: var(--font-color-light);
+  font-size: 12px;
+  transition: all 0.25s ease;
+  min-height: 100vh;
+  margin: 0px;
+}
+
+.dark {
+  background-color: #333;
+  color: var(--font-color-dark);
+}
+
+header {
+  padding: 0 50px 50px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.color-band {
+  height: 339px;
+  background-image: url(ressources/banniere.png), linear-gradient(90deg, rgba(51, 77, 110, 1) 0%, rgba(87, 52, 116, 1) 100%);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+
