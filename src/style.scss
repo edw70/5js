@@ -13,14 +13,14 @@ $background-toggle-knob: #fff000;
 body {
   font-size: 100%;
   background-color: $background-light-color;
-  --background: $background; // Define the custom property here as it depends on the variable
-  --font-color-light: $font-color-light; // Define the custom property here as it depends on the variable
-  --font-color-dark: $font-color-dark; // Define the custom property here as it depends on the variable
+  --background: $background; 
+  --font-color-light: $font-color-light; 
+  --font-color-dark: $font-color-dark; 
 }
 
 .light {
-  background-color: var(--background-light-color);
-  color: var(--font-color-light);
+  background-color: $background-light-color;
+  color: $font-color-light;
   font-size: 12px;
   transition: all 0.25s ease;
   min-height: 100vh;
@@ -29,7 +29,7 @@ body {
 
 .dark {
   background-color: #333;
-  color: var(--font-color-dark);
+  color: $font-color-dark;
 }
 
 header {
@@ -45,6 +45,8 @@ header {
   background-image: url(ressources/banniere.png), linear-gradient(90deg, rgba(51, 77, 110, 1) 0%, rgba(87, 52, 116, 1) 100%);
   background-repeat: no-repeat;
   background-position: top center;
+ /* z-index: -0;*/
+
 }
 
 /* Hide default HTML checkbox */
@@ -110,8 +112,7 @@ main
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 0;
-
+  
 }
 #page_default
 {
@@ -144,21 +145,19 @@ main
     margin-top: -350px;
     margin-left: 165px;
     margin-right: 165px;
+
 }
-
-
 /*barre de recherche*/
 #barre_recherche /*div principal*/
 {
-
     width: 397px;
     height: 242px;
     margin-top: 200px;
-    background-color:var(--color-box);
+    background-color:$color-box;
     border-radius: 4px;
     box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.50);
-    z-index: 1;
 }
+
 
 #barre_recherche p
 {
@@ -195,7 +194,6 @@ main
     border-top-right-radius: 0;
     border: 2px solid #4A357D;
     background-color: #0f0092;
-    color: var(--font-color-dark);
     padding: 12px 25px;
     display: inline-block;
     font-size: 20px;
@@ -206,12 +204,12 @@ main
     box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.50);
     margin-top: 200px;
     margin-left: -170px;
+    color:$font-color-dark;
 }
 
 #barre_recherche .submit-btn:hover
 {
     background-color: #0056b3;
-
 }
 
 ::placeholder
@@ -289,7 +287,7 @@ main
 {
     line-height: 20px;
     font-size: 17px;
-    color:#fff;
+    color: $font-color-dark;
 }
 
 #openPopup:hover
@@ -316,7 +314,6 @@ p:hover #openPopup .svg-icon
 
 #police1 
 {   
-    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     padding-right: 13px;

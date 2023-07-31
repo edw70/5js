@@ -1,6 +1,9 @@
 /*fonction du dictionnaire*/
-
-export function search() {
+const btnSubmit = document.querySelector("#confirme");
+btnSubmit.addEventListener("click", function(e) {
+  search();
+})
+function search() {
     let word = document.getElementById("Recherche").value;
     let resultat = document.getElementById("resultat");
   

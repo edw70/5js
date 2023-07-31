@@ -1,2 +1,2 @@
 import './style.scss';
-import "./dictionnary";
+import "./dictionnary.js";
