@@ -56,15 +56,15 @@ const config = {
                 test: /\.(js|jsx)$/i,
                 loader: 'babel-loader',
             },
-            {
+          /*  {
                 test: /\.css$/i,
                 use: [stylesHandler,'css-loader'],
-            },
+            },*/
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.s[ac]ss$/i, 
                 use: [
                   // Creates `style` nodes from JS strings
-                  "style-loader",
+                  stylesHandler,
                   // Translates CSS into CommonJS
                   "css-loader",
                   // Compiles Sass to CSS

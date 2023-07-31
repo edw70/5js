@@ -2,11 +2,77 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Webpack App</title>
-    <script defer src="main.js"></script></head>
-    <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
-    </body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Az dictionnary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><script defer src="main.js"></script><link href="style.css" rel="stylesheet"></head>
     
+<body class="light">
+    <div id="popup">
+        <div id="en_tete">
+            <label class="btn-toggle">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div id="font_choix">
+            <label id="police1">
+                <input class="polices" checked="checked" type="checkbox" name="police"
+                    value="Verdana, Geneva, Tahoma, sans-serif">
+                <span class="checkmark"></span> style
+            </label>
+
+            <label id="police2">
+                <input class="polices" checked="checked" type="checkbox" name="police" value="monospace">
+                <span class="checkmark"></span> style
+            </label>
+
+            <label id="police3">
+                <input class="polices" checked="checked" type="checkbox" name="police"
+                    value="Georgia, 'Times New Roman', Times, serif">
+                <span class="checkmark"></span> style
+            </label>
+        </div>
+
+        <button id="closePopup">x</button>
+    </div>
+
+    <header class="color-band"> 
+      
+
+        <p>
+            <img srcset="./ressources/logo_mobile.webp 80w, ./ressources/logo.webp 111w" sizes="(max-width: 768px) 80px,
+            111px" id="logo" src="./ressources/logo.webp" alt="Az" >
+        </p>
+        
+
+        <p>
+            <button id="openPopup">
+                <img class="svg-icon" src="ressources/p3.svg">
+
+                <span class="lable">Settings</span>
+            </button>
+        </p>
+    </header>
+
+    <div id="contenair">
+        <div id="barre_recherche">
+            <input id="Recherche" type="text" placeholder="Word ..." class="subscribe-input">
+            <button onclick="search()" id="confirme" class="submit-btn" type="submit">search &#128269</button>
+        </div>
+    </div>
+
+        <main>   
+            <div id="resultat">
+                <div id="page_default">
+                    <p  id="welcome">WELCOME  </p>
+                    
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p><a href="">Mentions légales</a></p>
+            <p>&copy;</p>
+        </footer>
+    </body>        
 </html>
