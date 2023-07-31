@@ -44,11 +44,11 @@ const config = {
         new MiniCssExtractPlugin({
             filename: "style.css",
         }),
-      /*  new CopyPlugin({
+       new CopyPlugin({
             patterns: [
                 {from: "./src/ressources", to: "ressources"},
             ],
-        }),*/
+        }),
     ],
     module: {
         rules: [
