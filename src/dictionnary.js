@@ -1,8 +1,10 @@
 /*fonction du dictionnaire*/
 const btnSubmit = document.querySelector("#confirme");
-btnSubmit.addEventListener("click", function(e) {
-  search();
-})
+if (btnSubmit != null) {
+  btnSubmit.addEventListener("click", function(e) {
+    search();
+  });
+}
 function search() {
     let word = document.getElementById("Recherche").value;
     let resultat = document.getElementById("resultat");
@@ -90,10 +92,13 @@ function search() {
     }
   }
   // Ajouter un écouteur d'événement sur le champ de recherche (avec l'ID "Recherche")
+if(document.getElementById("Recherche") != null) {
   document.getElementById("Recherche").addEventListener("keydown", function(event) {
     // Vérifier si la touche pressée est la touche "Entrée" (code de touche 13)
     if ( event.key === "Enter") {
       // Appeler la fonction search
       search();
     }
+  
   });
+}

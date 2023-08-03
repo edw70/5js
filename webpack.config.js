@@ -37,10 +37,14 @@ const config = {
                 
             },
         }),
-       /* new HtmlWebpackPlugin({
-            template: './src/thankYou.html',
-            filename: 'thankyou.html',
-        }),*/
+        new HtmlWebpackPlugin({
+            template: './src/mentions.html',
+            filename: 'mentions.html',
+            meta:{
+                viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+                
+            },
+        }),
         new MiniCssExtractPlugin({
             filename: "style.css",
         }),

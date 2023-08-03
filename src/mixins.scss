@@ -1,41 +1,17 @@
-@mixin slider-style($mode: light) {
-    $background: if($mode == 'light', $background, $background-toggle-on);
-    .slider {
-      background-color: $background;
-      --background: #28096b;
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: var(--background);
-      transition: .5s;
-      border-radius: 30px;
-    }
-  
-    .slider::before {
-    background: $background;
-    position: absolute;
-    content: "";
-    height:22.4px;
-    width: 22.4px;
-    border-radius: 50%;
-    left: 10%;
-    bottom: 15%;
-    box-shadow: inset 8px -4px 0px 0px #fff000;
-    background: var(--background);
-    transition: .5s;
-    }
-  
-    input:checked + .slider {
-      background-color: if($mode == 'light', $background-toggle-on, $background-toggle-off);
-    }
-  
-    input:checked + .slider:before {
-      transform: translateX(100%);
-      box-shadow: inset 15px -4px 0px 15px $background-toggle-knob;
-    }
-  }
-  
-  
+@mixin custom_border_shadow
+{
+    border: 1px solid #4A357D;
+    box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.50);
+}
+
+
+@mixin custom_checkbox
+{
+    background: black;
+    box-shadow: -5px -5px var(--spread) 0px #5B51D8,
+    0 -5px var(--spread) 0px #833AB4, 5px -5px var(--spread) 0px #E1306C,
+    5px 0 var(--spread) 0px #FD1D1D, 5px 5px var(--spread) 0px #F77737,
+    0 5px var(--spread) 0px #FCAF45, -10px 10px var(--spread) 0px #FFDC80;
+}
+
+

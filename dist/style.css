@@ -2,6 +2,9 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
   \*********************************************************************************************************/
 @charset "UTF-8";
+/* $background: #28096b;
+$background-toggle-on: #522ba7; */
+/*@import './src/mixins.scss';*/
 body {
   font-size: 100%;
   background-color: #F5F5F5;
@@ -20,7 +23,7 @@ body {
 }
 
 .dark {
-  background-color: #333;
+  background: #333;
   color: #F5F5F5;
 }
 
@@ -37,7 +40,6 @@ header {
   background-image: url(81b006cc8cbf3526fd1c.png), linear-gradient(90deg, rgb(51, 77, 110) 0%, rgb(87, 52, 116) 100%);
   background-repeat: no-repeat;
   background-position: top center;
-  /* z-index: -0;*/
 }
 
 /* Hide default HTML checkbox */
@@ -100,12 +102,13 @@ main {
 }
 
 #page_default {
-  border: 2px solid #703876;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid #4A357D;
+  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
   border-radius: 4px;
   padding: 50px;
   font-size: 80px;
   margin-bottom: 245px;
+  background: #F8F8F8;
 }
 
 #welcome {
@@ -167,10 +170,11 @@ main {
 
 #barre_recherche .submit-btn {
   position: absolute;
+  border: 1px solid #4A357D;
+  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
   border-radius: 30px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  border: 2px solid #4A357D;
   background-color: #0f0092;
   padding: 12px 25px;
   display: inline-block;
@@ -179,7 +183,6 @@ main {
   letter-spacing: 5px;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
   margin-top: 200px;
   margin-left: -170px;
   color: #F5F5F5;
@@ -202,10 +205,10 @@ main {
   transform: translate(340%, 310%);
   padding: 20px;
   border-radius: 7px;
-  border: 1px solid #703876;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: var(--color-box);
-  color: var(--font-color-light);
+  border: 1px solid #4A357D;
+  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
+  background-color: #F8F8F8;
+  color: #703876;
   z-index: 9999;
 }
 
@@ -380,22 +383,22 @@ p:hover #openPopup .svg-icon {
   padding-bottom: 20px;
   box-sizing: border-box;
   background-color: #7F3977;
-  color: var(--font-color-dark);
+  color: #F5F5F5;
   border-radius: 5px;
   text-align: center;
 }
 
 .rest {
   padding-left: 80px;
-  border: 2px solid #703876;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid #4A357D;
+  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
   border-radius: 4px;
   padding: 50px;
   margin-bottom: 320px;
   font-weight: 700;
   color: transparent;
   font-size: 50px;
-  background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+  background: url(8d82363e347942aebaae.webp) repeat;
   background-position: 40% 50%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -434,12 +437,12 @@ audio {
 }
 
 .carte1, .carte2, .carte3 {
-  border: 1px solid #703876;
+  border: 1px solid #4A357D;
+  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
   border-top: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
-  background-color: var(--color-box);
-  color: var(--font-color-light);
+  background-color: #F8F8F8;
+  color: #703876;
   width: 332px;
 }
 
@@ -450,25 +453,86 @@ p {
 footer {
   display: flex;
   background-image: linear-gradient(90deg, rgb(51, 77, 110) 0%, rgb(87, 52, 116) 100%);
-  color: var(--font-color-dark);
+  color: #F5F5F5;
   justify-content: space-between;
   padding: 10px 10px 10px 10px;
   font-size: 15px;
   /*  position: sticky;
-    bottom: 0;*/
+  bottom: 0;*/
 }
 
 a {
-  color: var(--font-color-dark);
+  color: #F5F5F5;
   text-decoration: none;
 }
 
+#one {
+  display: flex;
+  background-color: #7F3977;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  width: 1500px;
+}
+
+#Back {
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #4A357D;
+  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgb(197, 150, 228) 0%, rgb(241, 42, 213) 100%);
+}
+
+#Back:hover {
+  background: linear-gradient(0deg, rgb(197, 150, 228) 0%, rgb(241, 42, 213) 100%);
+  opacity: 70%;
+  top: 10px;
+  transition: all 0.25s ease;
+}
+
+#two {
+  width: 1500px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  color: #703876;
+  border: 1px solid #4A357D;
+  box-shadow: -5px 6px 20px 0px rgba(74, 53, 125, 0.5);
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  text-align: justify;
+  font-size: 14px;
+  margin-top: 50px;
+  background: #F8F8F8;
+  display: flex;
+}
+
 @media screen and (max-device-width: 1440px) {
+  #two {
+    font-size: 16px;
+    width: 90%;
+    margin-left: 80px;
+  }
   #popup {
     transform: translate(250%, 310%);
   }
 }
 @media screen and (max-device-width: 1024px) {
+  .mentions_p {
+    width: 100%;
+  }
+  #two {
+    font-size: 16px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #page_default {
+    margin-left: -100px;
+  }
   #resultat {
     display: block;
     margin-left: 100px;
@@ -498,8 +562,16 @@ a {
   }
 }
 @media screen and (max-device-width: 768px) {
-  #contenair {
-    margin-top: -390px;
+  .mentions_p {
+    width: 700px;
+  }
+  #two {
+    font-size: 16px;
+    width: 90%;
+    margin-left: 36px;
+  }
+  #page_default {
+    margin-left: -30px;
   }
   #resultat {
     margin-left: 32px;
@@ -529,6 +601,15 @@ a {
   }
 }
 @media screen and (max-device-width: 640px) {
+  .mentions_p {
+    width: 100%;
+  }
+  #two {
+    font-size: 16px;
+    width: 90%;
+    margin-left: 36px;
+    margin-right: 20px;
+  }
   #contenair {
     margin-left: 0;
     margin-right: 0;
@@ -546,7 +627,7 @@ a {
   }
   .rest {
     letter-spacing: -3px;
-    margin-left: 10px;
+    margin-left: -5px;
   }
   .carte1, .carte2, .carte3 {
     width: 95%;
@@ -559,6 +640,12 @@ a {
   }
 }
 @media screen and (max-device-width: 425px) {
+  #two {
+    width: 90%;
+  }
+  #page_default {
+    margin-left: 5px;
+  }
   #welcome {
     font-size: 60px;
   }
@@ -625,6 +712,13 @@ a {
   }
 }
 @media screen and (max-device-width: 375px) {
+  #two {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+  #page_default {
+    margin-left: 0px;
+  }
   #welcome {
     font-size: 50px;
   }
@@ -637,6 +731,10 @@ a {
   }
 }
 @media screen and (max-device-width: 320px) {
+  #two {
+    width: 80%;
+    margin-left: 100;
+  }
   #welcome {
     font-size: 40px;
   }
