@@ -1,3 +1,5 @@
+
+
 /*popup*/
 // Récupérer les éléments du DOM
 const openBtn = document.getElementById('openPopup');
@@ -23,19 +25,25 @@ closeBtn.addEventListener('click', closePopup);
 
 
 /* /*welcome*/
-if(document.getElementById("") != null)
- $(document).ready(function(){
-  let mouseX, mouseY;
-  let ww = $( window ).width();
-  let wh = $( window ).height();
-  let traX, traY;
-  $(document).mousemove(function(e){
-    mouseX = e.pageX;
-    mouseY = e.pageY;
+
+ // Utilisez l'événement mousemove sur l'objet document pour détecter
+  // le mouvement de la souris sur l'ensemble de la page.
+  document.addEventListener("mousemove", function(e) {
+   
+  let mouseX = e.pageX;
+  let mouseY = e.pageY;
     traX = ((4 * mouseX) / 570) + 40;
     traY = ((4 * mouseY) / 570) + 50;
-   // console.log(traX);
-    $("#welcome").css({"background-position": traX + "%" + traY + "%"});
-    $(".rest").css({"background-position": traX + "%" + traY + "%"});
+
+    let welcomeElement = document.getElementById("welcome");
+    if (welcomeElement) {
+      welcomeElement.style.backgroundPosition = traX + "%" + traY + "%";
+    }
+
+    document.querySelectorAll(".rest").forEach(element => {
+      element.style.backgroundPosition = traX + "%" + traY + "%";
+    })
+
   });
-});  
+  
+  

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+        <meta charset="UTF-8">
         <title>Az dictionnary</title>
     </head>
     
@@ -48,7 +47,7 @@
 
         <p>
             <button id="openPopup">
-                <img class="svg-icon" src="ressources/p3.svg">
+                <img class="svg-icon" src="ressources/p3.svg "alt="roue denteler">
 
                 <span class="lable">Settings</span>
             </button>
@@ -56,12 +55,15 @@
 </header>
 <div id="contenair">
     <div id="barre_recherche">
-        <input id="Recherche" type="text" placeholder="Word ..." class="subscribe-input">
-        <button id="confirme" class="submit-btn" type="button">search &#128269</button> <!--onclick="search()"-->
+        <form id="myForm">
+            <input id="Recherche" type="text" placeholder="Word ..." class="subscribe-input">
+            <button id="confirme" class="submit-btn" type="submit">search &#128269</button> 
+        </form>
     </div>
 </div>
         <main>   
-            <div id="resultat">
+            <div >
+                <div id="resultat"></div>
                 <div id="page_default">
                     <p  id="welcome">WELCOME  </p>
                     

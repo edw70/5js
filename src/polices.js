@@ -6,6 +6,7 @@ function mettreAJourPolice() {
         selectedFonts.push(checkbox.value);
       }
     });
+    
     let bodyElement = document.getElementsByTagName('body')[0];
     bodyElement.style.fontFamily = selectedFonts.join(', ');
     let placeholder = document.getElementById("Recherche");

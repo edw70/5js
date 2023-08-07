@@ -7,6 +7,7 @@
     "concurrently": "^8.2.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "expose-loader": "^1.0.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "sass": "^1.64.0",
@@ -26,5 +27,8 @@
     "watch": "webpack --watch --mode=development",
     "serve": "webpack serve",
     "dev": "concurrently \"npm run watch\" \"npm run serve\""
+  },
+  "dependencies": {
+    "jquery": "^3.7.0"
   }
 }
